@@ -22,7 +22,36 @@ h3 {
 }
 
 
+/*MOBILE SHOW AND HIDE CLASSES START
+------
+DO NOT TOUCH*/
+.mobileHide { display: inline; } 
+/* Smartphone Portrait and Landscape */ 
+@media only screen 
+  and (min-device-width : 320px) 
+  and (max-device-width : 576px){ 
+   .mobileHide { 
+      display: none;
+   }
+}
 
+.mobileShow {display: none;} 
+/* Smartphone Portrait and Landscape */ 
+@media only screen 
+  and (min-device-width : 320px) 
+  and (max-device-width : 576px){ 
+    .mobileShow {
+      display: inline;
+    }
+}
+/*MOBILE SHOW AND HIDE CLASSES END*/
+
+
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
 .link-1 {
   position: relative;
   text-decoration: none;
@@ -96,7 +125,26 @@ h3 {
   width: 100%;
   padding: 0;
   margin: 0;
-  
+}
+#architectureLanding {
+  height: 90vh;
+}
+#architectureProjectNames {
+ background-color: #EDE5A6;
+ height: auto;
+}
+#architectureProjectPictures {
+  background-color: #498467;
+  height: auto;
+}
+#architectureProjectDescriptions {
+  background-color: #eee;
+  height: auto;
+}
+
+.projectName {
+  list-style: none;
+  font-size: 3em;
 }
 
 .navbar #logoname {
@@ -115,9 +163,16 @@ h3 {
   color: black;
 }
 .navbar-light .navbar-nav .nav-link{
+  color: #c1c1c1;
+  padding: 5px;
+  margin: 10px 14px 0 14px;
+  font-size: 2em;
+  background-color: transparent;
+}
+.navbar-light .navbar-nav .nav-link .active {
   color: black;
   padding: 5px;
-  margin: 0 18px 0 18px;
+  margin: 10px 14px 0 14px;
   font-size: 2em;
   background-color: transparent;
 }
@@ -130,9 +185,81 @@ h3 {
   border-color: transparent;
   background-color: transparent;
 }
+.navdescription {
+  max-width: 100px;
+  justify-content: left;
+  font-size: .5em;
+  font-weight: 400;
+}
+
+.pagetitle {
+  font-size: 3.5em;
+  position: relative;
+  margin: auto;
+  font-weight: 700;
+}
+
+.content {
+  /*flex: grow;*/
+  margin: 0;
+  padding:; 0;
+}
+
+.scroll-wrapper {
+  /*flex: 0 0 300px;*/
+  height: 500px;
+  position: relative;
+  padding-left: 50px;
+  width: 100%;
+}
+
+#scrollspy {
+  position: fixed;
+  /*text-align: right;*/
+}
+#scrollspy ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  font-size: 1.3em ;
+  /*line-height: 1.3em;*/
+}
+#scrollspy ul li {
+  max-width: 205px;
+}
+#scrollspy ul a {
+  text-decoration: none;
+  color: #c1c1c1;
+  transition: color 0.2s;
+  
+}
+#scrollspy ul a:hover {
+  color: black;
+}
+#scrollspy ul .current {
+  color: black;
+  font-size: 2em;
+  /*transition: ease-in 0.1s;*/
+}
+
+.projectitem {
+  background-color: #FFEB93;
+  height: 500px;
+  margin: 0 0 0 0;
+  width: 100%;
+}
+
 
 /*body { overflow: hidden; background: #000; }*/
 
+
+
+
+
+
+
+/*animation */
 #Logo {
   width: 80%;
   height: 100%;
