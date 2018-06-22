@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  /*text-transform: uppercase;*/
 }
 p {
   font-size: 1.3em;
@@ -192,6 +193,8 @@ DO NOT TOUCH*/
   font-weight: 400;
 }
 
+/*NAV END*/
+
 .pagetitle {
   font-size: 3.5em;
   position: relative;
@@ -199,12 +202,15 @@ DO NOT TOUCH*/
   font-weight: 700;
 }
 
-.content {
+
+.projectContent {
   /*flex: grow;*/
   margin: 0;
-  padding:; 0;
+  padding: 0;
 }
-
+.projectPage {
+  margin-top: 30px;
+}
 .scroll-wrapper {
   /*flex: 0 0 300px;*/
   height: 500px;
@@ -243,17 +249,108 @@ DO NOT TOUCH*/
   /*transition: ease-in 0.1s;*/
 }
 
-.projectitem {
+
+
+.projectItem {
   background-color: #FFEB93;
-  height: 500px;
-  margin: 0 0 0 0;
+  min-width: 250px;
+  min-height: 250px;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+.lastProjectItem {
+  margin-bottom: 500px;
+}
+.projectItemImage {
+  width: 100%;
+  height: auto;
+}
+/*@media screen and (max-width: 640px){
+  .projectItem{
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .projectItem{
+    width: 33.33333%;
+  }
+}*/
+.content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  /*max-width: 400px;*/
+  margin: auto;
+  overflow: hidden;
+}
+
+.content .content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay{
+  opacity: 1;
+}
+
+.content-image{
   width: 100%;
 }
 
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
 
-/*body { overflow: hidden; background: #000; }*/
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
 
+.content h1{
+  font-weight: 700;
+  position: absolute;
+  text-align: right;
+  padding: 1em;
+  width: 100%;
+}
 
+.content-details p{
+  max-width: 300px;
+  text-align: right;
+  float: right;
+}
+
+.whiteText {
+  color: #fff;
+}
 
 
 
