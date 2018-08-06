@@ -7,19 +7,24 @@ p {
   font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
 }
 a {
+  /*font-size: 1.75em;*/
   font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
 }
+a:hover {
+  text-decoration: none !important;
+}
 h1 {
-  font-size: 2.5em;
-  font-family:'PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  font-weight: 700;
+  font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
 }
 h2 {
   font-size: 1.75em;
-  font-family: 'PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
 }
 h3 {
   font-size: 1.4em;
-  font-family: 'PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 
@@ -49,11 +54,11 @@ DO NOT TOUCH*/
 
 
 
-.wrapper {
+/*.wrapper {
   max-width: 1200px;
   margin: auto;
-}
-.link-1 {
+}*/
+.linkUnderlineHighlight {
   position: relative;
   text-decoration: none;
   display: inline-block;
@@ -62,7 +67,7 @@ DO NOT TOUCH*/
   transition: color ease 0.3s;
 }
 
-.link-1::after {
+.linkUnderlineHighlight::after {
     content: '';
     position: absolute;
     z-index: -1;
@@ -74,11 +79,11 @@ DO NOT TOUCH*/
     transition: all ease 0.3s;
   }
 
-.link-1:hover {
+.linkUnderlineHighlight:hover {
     color: white;
   }
 
-.link-1:hover::after {
+.linkUnderlineHighlight:hover::after {
       height: 100%;
     }
 
@@ -88,8 +93,7 @@ DO NOT TOUCH*/
 }
 .one a {
   text-decoration: none;
-  /*font-size: 2em;*/
-  font-weight: 700;
+  /*font-weight: 700;*/
   margin: 0 20px 0 0;
   position: relative;
   transition: transform .3s ease-out;
@@ -104,7 +108,7 @@ DO NOT TOUCH*/
   top: 100%;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 2px;
   background-color: #000; /*line color*/
   content: '';
   -webkit-transform: translateY(8px);
@@ -119,6 +123,7 @@ DO NOT TOUCH*/
 }
 
 /*---------*/
+
 
 #landing {
   background-color: #fff;
@@ -149,32 +154,35 @@ DO NOT TOUCH*/
 }
 
 .navbar #logoname {
-  font-size: 3.5em;
+  margin: 0;
+  font-size: 4em;
+  padding: 0 10px 0 20px;
   font-weight: 700;
 }
 .navbar{
   /*position: static;*/
   background-image: none;
-  background-color: transparent;
+  background-color: white;
   border-style: none;
   border-radius: 0px;
   box-shadow: none;
-  padding: 0;
+  padding: 0 0 10px 0 ;
   margin: 0;
   color: black;
+  z-index: 100;
 }
 .navbar-light .navbar-nav .nav-link{
   color: #c1c1c1;
   padding: 5px;
   margin: 10px 14px 0 14px;
-  font-size: 2em;
+  font-size: 1.75em;
   background-color: transparent;
 }
 .navbar-light .navbar-nav .nav-link .active {
   color: black;
   padding: 5px;
   margin: 10px 14px 0 14px;
-  font-size: 2em;
+  font-size: 1.75em;
   background-color: transparent;
 }
 .navbar-light .navbar-nav .nav-link:hover {
@@ -195,166 +203,110 @@ DO NOT TOUCH*/
 
 /*NAV END*/
 
-.pagetitle {
-  font-size: 3.5em;
+
+/*archpage*/
+.wrapper {
+  max-width: 1250px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
   position: relative;
-  margin: auto;
-  font-weight: 700;
 }
-
-
-.projectContent {
-  /*flex: grow;*/
-  margin: 0;
-  padding: 0;
-}
-.projectPage {
-  margin-top: 30px;
-}
-.scroll-wrapper {
-  /*flex: 0 0 300px;*/
-  height: 500px;
-  position: relative;
-  padding-left: 50px;
+.projectItemContainer {
   width: 100%;
-}
-
-#scrollspy {
-  position: fixed;
-  /*text-align: right;*/
-}
-#scrollspy ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  right: 0;
-  font-size: 1.3em ;
-  /*line-height: 1.3em;*/
-}
-#scrollspy ul li {
-  max-width: 205px;
-}
-#scrollspy ul a {
-  text-decoration: none;
-  color: #c1c1c1;
-  transition: color 0.2s;
-  
-}
-#scrollspy ul a:hover {
-  color: black;
-}
-#scrollspy ul .current {
-  color: black;
-  font-size: 2em;
-  /*transition: ease-in 0.1s;*/
-}
-
-
-
-.projectItem {
-  background-color: #FFEB93;
-  min-width: 250px;
-  min-height: 250px;
-  width: 100%;
-  height: auto;
+  height: 100%;
   padding: 0;
   margin: 0;
 }
-.lastProjectItem {
-  margin-bottom: 500px;
+.projectItemHalf{
+  padding: 10px 20px 10px 20px;
+  margin:0;
 }
 .projectItemImage {
   width: 100%;
   height: auto;
-}
-/*@media screen and (max-width: 640px){
-  .projectItem{
-    display: block;
-    width: 100%;
-  }
+  padding: 0;
+  margin: 0;
 }
 
-@media screen and (min-width: 900px){
-  .projectItem{
-    width: 33.33333%;
-  }
-}*/
-.content {
-  position: relative;
+.projectItemDescription {
+  max-width: 350px;
   width: 100%;
-  height: auto;
-  /*max-width: 400px;*/
-  margin: auto;
-  overflow: hidden;
+  text-align:left;
+  /*margin: 0 50px 0 50px;*/
+  margin:0;
+  padding: 0;
+}
+.projectItemDescription p{
+  margin-top: 20px;
+}
+.projectItemDescription a{
+  margin-top: 20px;
 }
 
-.content .content-overlay {
-  background: rgba(0,0,0,0.7);
-  position: absolute;
-  height: 99%;
+.pageTitle {
   width: 100%;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  -moz-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s;
-}
-
-.content:hover .content-overlay{
-  opacity: 1;
-}
-
-.content-image{
-  width: 100%;
-}
-
-.content-details {
-  position: absolute;
+  height: 200px;
+  /*padding: 10px 20px 10px 20px;*/
+  margin:0 0 50px 0;
   text-align: center;
-  padding-left: 1em;
-  padding-right: 1em;
+  background-color: #000;
+}
+.pageTitle h1 {
+  line-height: 200px;
+  color: white;
+}
+/*archpage*/
+
+/*
+.workOptionContainer {
+  height: 400px;
   width: 100%;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+}*/
+.itemContainer {
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
 }
-
-.content:hover .content-details{
-  top: 50%;
-  left: 50%;
-  opacity: 1;
+#work {
+  position: absolute; 
+  top: 0; 
+  width: 100vw; 
+  height: 100vh; 
+  z-index: 1; 
+  padding: 0; 
+  margin: 0;
 }
-
-.content h1{
-  font-weight: 700;
-  position: absolute;
-  text-align: right;
-  padding: 1em;
+.workHalf {
+  padding:0;
+  margin:0;
+}
+.workOptionButton {
+  text-align: center;
+  width: 50vw;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: transparent;
+}
+.workOptionButton:hover {
+  background-color: #000;
+  /*font-weight: 700;*/
+}
+h1.workOption {
+  line-height: 100vh;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+h1.workOption:hover {
+  color: white;
+  /*font-weight: 700;*/
+}
+#allprojectslabel {
   width: 100%;
+  text-align: center;
 }
-
-.content-details p{
-  max-width: 300px;
-  text-align: right;
-  float: right;
-}
-
-.whiteText {
-  color: #fff;
-}
-
-
-
-
 
 /*animation */
 #Logo {
