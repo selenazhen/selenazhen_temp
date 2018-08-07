@@ -88,10 +88,10 @@ DO NOT TOUCH*/
     }
 
 
-.one {
+.linkUnderlineJump {
   max-width: 1200px;
 }
-.one a {
+.linkUnderlineJump a {
   text-decoration: none;
   /*font-weight: 700;*/
   margin: 0 20px 0 0;
@@ -99,11 +99,11 @@ DO NOT TOUCH*/
   transition: transform .3s ease-out;
   display: inline-block;
 }
-.one a:hover {
+.linkUnderlineJump a:hover {
   transform: translate(0, -5px);
   background-color: transparent;
 }
-.one a:before {
+.linkUnderlineJump a:before {
   position: absolute;
   top: 100%;
   left: 0;
@@ -116,8 +116,40 @@ DO NOT TOUCH*/
   transition-property: -webkit-transform, opacity;
   transition-duration: .3s;
 }
+.linkUnderlineJump a:hover:before {
+  -webkit-transform: translateY(0);
+  opacity: 1;
+}
 
-.one a:hover:before {
+.linkUnderlineJumpDark {
+  max-width: 1200px;
+}
+.linkUnderlineJumpDark a {
+  text-decoration: none;
+  /*font-weight: 700;*/
+  margin: 0 20px 0 0;
+  position: relative;
+  transition: transform .3s ease-out;
+  display: inline-block;
+}
+.linkUnderlineJumpDark a:hover {
+  transform: translate(0, -5px);
+  background-color: transparent;
+}
+.linkUnderlineJumpDark a:before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white; /*line color*/
+  content: '';
+  -webkit-transform: translateY(8px);
+  opacity: 0;
+  transition-property: -webkit-transform, opacity;
+  transition-duration: .3s;
+}
+.linkUnderlineJumpDark a:hover:before {
   -webkit-transform: translateY(0);
   opacity: 1;
 }
@@ -126,13 +158,14 @@ DO NOT TOUCH*/
 
 
 #landing {
-  background-color: #fff;
   height: 100vh;
   width: 100%;
   padding: 0;
   margin: 0;
+  top: 0;
 }
-#architectureLanding {
+
+/*#architectureLanding {
   height: 90vh;
 }
 #architectureProjectNames {
@@ -146,8 +179,122 @@ DO NOT TOUCH*/
 #architectureProjectDescriptions {
   background-color: #eee;
   height: auto;
+}*/
+
+@media only screen and (min-width: 769px) {
+    /* tablets and desktop */
+    #landing h1.fadeintext{
+      font-size: 8em;
+    }
+}
+#landing h1.fadeintext{
+  line-height: 100vh;
+  text-align: center;
+  color: white;
+  z-index: 1000;
+
+  fill-opacity: 0;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration: 1;
+  
+  animation-name: fadeIn;
+  animation-duration: 4s, 1s;
+  animation-delay: 0s, 2.5s;
+  -moz-animation: fadein 4s; /* Firefox */
+  -webkit-animation: fadein 4s; /* Safari and Chrome */
+  -o-animation: fadein 4s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/*-----*/
+#movingDiv {
+    position: fixed;
+    top:0;
+    left:0;
+    height: 24px;
+    width: 24px;
+    /*background-color: white;*/
+    border: 3px solid white;
+    color: white;
+    margin: -12px 0 0 -12px;
+    border-radius: 50%;
+}
+/*---*/
+
+
+/*.appear{
+  color: white;
+  z-index: 50;
+  position: fixed;
+}
+.appear table {
+  width: 100vw;
+  height: 100vh;
+}
+.appear table tr {
+  width: 100vw;
+}
+.appear td {
+  width: ;
+}
+.appear td:hover {
+  background-image: url("img/logo_landingpage.svg");
+}*/
+
+#grid {
+  z-index: 10;
+}
+#grid .itemContainer {
+  opacity: 0;
+}
+#grid .itemContainer:hover {
+  opacity: 1;
+  fill-opacity: 0;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration: 1;
+  
+  animation-name: fadeIn;
+  animation-duration: 2s, 1s;
+  animation-delay: 0s, 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s; /* Safari and Chrome */
+  -o-animation: fadein 1s; /* Opera */
 }
 
+
+/*--*/
 .projectName {
   list-style: none;
   font-size: 3em;
@@ -171,29 +318,59 @@ DO NOT TOUCH*/
   color: black;
   z-index: 100;
 }
-.navbar-light .navbar-nav .nav-link{
-  color: #c1c1c1;
+.navbar-nav .nav-link{
   padding: 5px;
-  margin: 10px 14px 0 14px;
+  margin: 10px 20px 0 0;
   font-size: 1.75em;
   background-color: transparent;
 }
-.navbar-light .navbar-nav .nav-link .active {
-  color: black;
+.navbar-nav a.nav-link .active {
   padding: 5px;
-  margin: 10px 14px 0 14px;
+  margin: 10px 20px 0 0;
   font-size: 1.75em;
   background-color: transparent;
+}
+.navbar-light .navbar-nav .nav-link{
+  color: #ddd;
 }
 .navbar-light .navbar-nav .nav-link:hover {
   background-color: transparent;
   color: black !important;
 }
 .navbar-light .navbar-toggler {
-  color: transparent;
+  color: white;
   border-color: transparent;
   background-color: transparent;
+  margin: 13px 20px 10px 10px;
 }
+#navbarbutton {
+  color: white;
+  padding:0;
+  margin:0;
+}
+/*--*/
+.navbar-dark{
+  background-color: black;
+}
+.navbar-dark .navbar-nav .nav-link{
+  color: #595959;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  background-color: transparent;
+  color: white !important;
+}
+.navbar-dark .navbar-toggler {
+  color: white;
+}
+.navbar-dark .navbar-toggler {
+  color: transparent;
+  border-color: white;
+  background-color: transparent;
+  padding: 10px;
+  margin: 8px 20px 0px 10px;
+}
+/*--*/
 .navdescription {
   max-width: 100px;
   justify-content: left;
@@ -257,6 +434,8 @@ DO NOT TOUCH*/
   color: white;
 }
 /*archpage*/
+
+
 
 /*
 .workOptionContainer {
