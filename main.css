@@ -1,6 +1,7 @@
 body {
   margin: 0;
   /*text-transform: uppercase;*/
+  background-color: #D8798A;
 }
 p {
   font-size: 1.3em;
@@ -109,7 +110,7 @@ DO NOT TOUCH*/
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #000; /*line color*/
+
   content: '';
   -webkit-transform: translateY(8px);
   opacity: 0;
@@ -120,6 +121,8 @@ DO NOT TOUCH*/
   -webkit-transform: translateY(0);
   opacity: 1;
 }
+
+
 
 .linkUnderlineJumpDark {
   max-width: 1200px;
@@ -163,6 +166,7 @@ DO NOT TOUCH*/
   padding: 0;
   margin: 0;
   top: 0;
+  position: absolute;
 }
 
 /*#architectureLanding {
@@ -181,17 +185,13 @@ DO NOT TOUCH*/
   height: auto;
 }*/
 
-@media only screen and (min-width: 769px) {
-    /* tablets and desktop */
-    #landing h1.fadeintext{
-      font-size: 8em;
-    }
-}
-#landing h1.fadeintext{
+
+h1.fadeintext{
   line-height: 100vh;
   text-align: center;
   color: white;
   z-index: 1000;
+  /*background-color: red;*/
 
   fill-opacity: 0;
   animation-timing-function: ease-in-out;
@@ -237,6 +237,8 @@ DO NOT TOUCH*/
         opacity: 1;
     }
 }
+
+
 /*-----*/
 #movingDiv {
     position: fixed;
@@ -249,28 +251,10 @@ DO NOT TOUCH*/
     color: white;
     margin: -12px 0 0 -12px;
     border-radius: 50%;
+    /*z-index: 10;*/
 }
 /*---*/
 
-
-/*.appear{
-  color: white;
-  z-index: 50;
-  position: fixed;
-}
-.appear table {
-  width: 100vw;
-  height: 100vh;
-}
-.appear table tr {
-  width: 100vw;
-}
-.appear td {
-  width: ;
-}
-.appear td:hover {
-  background-image: url("img/logo_landingpage.svg");
-}*/
 
 #grid {
   z-index: 10;
@@ -300,14 +284,104 @@ DO NOT TOUCH*/
   font-size: 3em;
 }
 
-.navbar #logoname {
+
+/*------navbar color variation-------*/
+.architectureColor {
+  color: #FFBC42 !important;
+  /*color: black !important;*/
+}
+.homeColor {
+  color: black !important;
+}
+.designColor {
+  /*color: black !important;*/
+  color: #51B9CC !important;
+}
+.funColor {
+  color: #D8798A !important;
+  /*color: black !important;*/
+}
+.aboutColor {
+  color: black !important;
+}
+
+.architectureColorBackgroundColor {
+  background-color: #FFBC42;
+  /*background-color: black;*/
+}
+.designColorBackgroundColor {
+  background-color: #51B9CC;
+}
+.funColorBackgroundColor {
+  background-color: #D8798A;
+  /*background-color: black;*/
+}
+.aboutColorBackgroundColor {
+  background-color: black;
+}
+.black3pxborder {
+  /*border: black 3px solid;*/
+}
+
+ /*line color*/
+
+.linkUnderlineJump a.architectureColor:before {
+  /*background-color: #FFBC42; */
+  background-color: black; 
+}
+.linkUnderlineJump a.designColor:before {
+  background-color: black; 
+}
+.linkUnderlineJump a.funColor:before {
+  /*background-color: #D81159; */
+  background-color: black; 
+}
+.linkUnderlineJump a.aboutColor:before {
+  background-color: black;
+}
+.fadeintextWorkOption a.fadeintextWorkOptionLink {
+  color: white;
+  opacity: .3;
+}
+.fadeintextWorkOption a.linkArchitectureColor:hover {
+  /*color: #FFBC42;*/
+  opacity: 1;
+}
+.fadeintextWorkOption a.linkDesignColor:hover {
+  /*color: #313131;*/
+  opacity: 1;
+}
+.fadeintextWorkOption a.linkFunColor:hover {
+  /*color: #D81159;*/
+  opacity: 1;
+}
+
+.architectureLineColor {
+  /*border-color: #FFBC42 !important;*/
+  border-color: black !important;
+}
+.homeLineColor {
+  /*border-color: black !important;*/
+}
+.designLineColor {
+  border-color: black !important;
+}
+.funLineColor {
+  /*border-color: #D81159 !important;*/
+  border-color: black !important;
+}
+.aboutLineColor {
+  border-color: black !important;
+}
+
+/*------------------------*/
+.navbar-brand  {
   margin: 0;
   font-size: 4em;
   padding: 0 10px 0 20px;
   font-weight: 700;
 }
 .navbar{
-  /*position: static;*/
   background-image: none;
   background-color: white;
   border-style: none;
@@ -315,36 +389,34 @@ DO NOT TOUCH*/
   box-shadow: none;
   padding: 0 0 10px 0 ;
   margin: 0;
-  color: black;
-  z-index: 100;
+  z-index: 1000;
 }
-.navbar-nav .nav-link{
+.navbar .navbar-nav .nav-link{
   padding: 5px;
   margin: 10px 20px 0 0;
-  font-size: 1.75em;
+  font-size: 1.5em;
+  background-color: transparent;
+  font-weight: 700;
+  text-transform: uppercase; 
+}
+.navbar .navbar-nav a.nav-link. {
   background-color: transparent;
 }
-.navbar-nav a.nav-link .active {
-  padding: 5px;
-  margin: 10px 20px 0 0;
-  font-size: 1.75em;
+
+.navbar .navbar-nav a.nav-link.inactive {
+  opacity: 0.3;
   background-color: transparent;
 }
-.navbar-light .navbar-nav .nav-link{
-  color: #ddd;
-}
-.navbar-light .navbar-nav .nav-link:hover {
+.navbar .navbar-nav a.nav-link.inactive:hover {
+  opacity: 1;
   background-color: transparent;
-  color: black !important;
 }
 .navbar-light .navbar-toggler {
-  color: white;
-  border-color: transparent;
   background-color: transparent;
-  margin: 13px 20px 10px 10px;
+  padding: 10px;
+  margin: 8px 20px 0px 10px;
 }
-#navbarbutton {
-  color: white;
+.navbar-light #navbarbutton {
   padding:0;
   margin:0;
 }
@@ -353,24 +425,34 @@ DO NOT TOUCH*/
   background-color: black;
 }
 .navbar-dark .navbar-nav .nav-link{
-  color: #595959;
+  color: white;
+  opacity: 0.3;
 }
-
 .navbar-dark .navbar-nav .nav-link:hover {
   background-color: transparent;
   color: white !important;
+  opacity: 1;
 }
 .navbar-dark .navbar-toggler {
-  color: white;
-}
-.navbar-dark .navbar-toggler {
-  color: transparent;
   border-color: white;
   background-color: transparent;
   padding: 10px;
   margin: 8px 20px 0px 10px;
 }
+.navbar-dark #navbarbutton {
+  color: white;
+  padding:0;
+  margin:0;
+}
+@media (min-width: 768px)  {
+  /*prevents navbar links from going to next row*/
+  .navbar-expand-md .navbar-collapse { 
+    min-width: 500px;
+    }
+}
 /*--*/
+
+
 .navdescription {
   max-width: 100px;
   justify-content: left;
@@ -381,7 +463,53 @@ DO NOT TOUCH*/
 /*NAV END*/
 
 
-/*archpage*/
+/*pages*/
+@media only screen and (min-width: 1441px) {
+    /* tablets and desktop */
+    .largerWrapper {
+      max-width: 1440px;
+      margin-bottom: 100px !important;
+      margin-top: 100px !important;
+    }
+    #landing {
+      max-height: 800px;
+      margin-bottom: 100px !important;
+    }
+    h1.fadeintext{
+      line-height: 800px;
+    }
+    .black3pxborder {
+      border: black 3px solid;
+    }
+    .pageTitle h1 {
+      line-height: 20vh !important;
+    }
+}
+@media only screen and (min-width: 769px) {
+    /* tablets and desktop */
+    #landing h1.fadeintext{
+      font-size: 6.5em;
+    }
+}
+@media only screen and (max-width: 768px) {
+    /* tablets and desktop */
+    .pageTitle h1 {
+      font-size: 30px !important; 
+      line-height: 150px !important;
+    }
+    .pageTitle {
+      margin-bottom: 0 !important;
+    }
+}
+.largerWrapper {
+  height: auto;
+  margin:0 auto;
+  position: relative;
+  background-color: white;
+  padding:0 ;/*
+  border: black 3px*/ solid;
+  z-index: 1500;
+}
 .wrapper {
   max-width: 1250px;
   height: 100%;
@@ -394,6 +522,7 @@ DO NOT TOUCH*/
   height: 100%;
   padding: 0;
   margin: 0;
+  position: relative;
 }
 .projectItemHalf{
   padding: 10px 20px 10px 20px;
@@ -423,15 +552,18 @@ DO NOT TOUCH*/
 
 .pageTitle {
   width: 100%;
-  height: 200px;
-  /*padding: 10px 20px 10px 20px;*/
+  height: 100%;
+  top: 0;
+  /*position: ;*/
+  padding: 0 20px 0 20px;
   margin:0 0 50px 0;
   text-align: center;
-  background-color: #000;
 }
 .pageTitle h1 {
-  line-height: 200px;
-  color: white;
+  line-height: 30vh;
+  color: black;
+  font-size: 6em;
+  text-transform: uppercase;
 }
 /*archpage*/
 
