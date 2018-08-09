@@ -191,6 +191,7 @@ h1.fadeintext{
   text-align: center;
   color: white;
   z-index: 1000;
+  margin:0;
   /*background-color: red;*/
 
   fill-opacity: 0;
@@ -465,7 +466,7 @@ h1.fadeintext{
 
 /*pages*/
 @media only screen and (min-width: 1441px) {
-    /* tablets and desktop */
+    /* large desktop */
     .largerWrapper {
       max-width: 1440px;
       margin-bottom: 100px !important;
@@ -477,6 +478,7 @@ h1.fadeintext{
     }
     h1.fadeintext{
       line-height: 800px;
+      /*limit viewport size*/
     }
     .black3pxborder {
       border: black 3px solid;
@@ -492,13 +494,16 @@ h1.fadeintext{
     }
 }
 @media only screen and (max-width: 768px) {
-    /* tablets and desktop */
+    /* mobile */
     .pageTitle h1 {
       font-size: 30px !important; 
       line-height: 150px !important;
     }
     .pageTitle {
       margin-bottom: 0 !important;
+    }
+    #landing h1.fadeintext{
+      font-size: 20px;
     }
 }
 .largerWrapper {
