@@ -1,11 +1,14 @@
+/*https://gist.github.com/msrose/2feacb303035d11d2d05*/
+
 body {
   margin: 0;
   /*text-transform: uppercase;*/
   background-color: #D8798A;
 }
 p {
-  font-size: 1.3em;
+  font-size: 1.4em;
   font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  margin-bottom: 15px;
 }
 a {
   /*font-size: 1.75em;*/
@@ -18,14 +21,23 @@ h1 {
   font-size: 3em;
   font-weight: 700;
   font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
 }
 h2 {
-  font-size: 1.75em;
+  font-size: 2.2em;
+  font-weight: 700;
   font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
 }
 h3 {
-  font-size: 1.4em;
+  font-size: 1.75em;
   font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -59,9 +71,10 @@ DO NOT TOUCH*/
 .linkUnderlineHighlight {
   position: relative;
   text-decoration: none;
+  border-bottom: 1px black solid;
   display: inline-block;
   color: black;
-  padding: 0 1px;
+  padding: 0 3px 0 3px;
   transition: color ease 0.3s;
   background-color: transparent;
   text-transform: uppercase;
@@ -77,7 +90,7 @@ DO NOT TOUCH*/
     height: 5%;
     left: 0;
     bottom: 0;
-    background-color: black ;
+    background-color: black;
     transition: all ease 0.3s;
   }
 
@@ -463,6 +476,16 @@ h1.fadeintext{
     #landing h1.fadeintext{
       font-size: 20px;
     }
+    .newspaperFillText3 {
+      -webkit-column-count: 1 !important; /* Chrome, Safari, Opera */
+      -moz-column-count: 1 !important; /* Firefox */
+      column-count: 1 !important;
+    }
+    .newspaperFillText2 {
+      -webkit-column-count: 1 !important; /* Chrome, Safari, Opera */
+      -moz-column-count: 1 !important; /* Firefox */
+      column-count: 1 !important;
+    }
 }
 .largerWrapper {
   /*WRAPPER AROUND ALL CONTENT FOR LARGE DESKTOPS*/
@@ -475,7 +498,7 @@ h1.fadeintext{
 }
 .wrapper {
   /*WRAPPER AROUND MAIN CONTENT*/
-  max-width: 1200px;
+  max-width: 1100px;
   height: 100%;
   margin: 0 auto;
   padding: 0 0 100px;
@@ -483,13 +506,10 @@ h1.fadeintext{
 }
 .projectItemContainer {
   width: 100%;
-  height: 100%;
+  height: auto;
   padding: 15px 15px 30px 15px;
   margin: 0;
   position: relative;
-}
-.projectItemContainer2 {
-  display: none;
 }
 .projectItem {
   width: 100%;
@@ -520,7 +540,6 @@ h1.fadeintext{
   height: auto;
 }
 /*crop?? https://stackoverflow.com/questions/493296/css-display-an-image-resized-and-cropped*/
-
 .projectItemImage {
   /*formerly '.crop'*/
   width: 100%;
@@ -537,59 +556,186 @@ h1.fadeintext{
   padding: 0;
     /*margin: -75px 0 0 -100px;*/
 }
-/*.projectItemContainer {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-.projectItemHalf{
-  padding: 10px 20px 10px 20px;
-  margin:0;
-}
-.projectItemImage {
+.image {
   width: 100%;
   height: auto;
-  padding: 0;
   margin: 0;
-}
-
-.projectItemDescription {
-  max-width: 350px;
-  width: 100%;
-  text-align:left;
-  margin:0;
   padding: 0;
+  border: 1px #eee solid;
 }
-.projectItemDescription p{
-  margin-top: 20px;
-}*/
-/*.projectItemDescription a{
-  margin-top: 20px;
-}*/
-
+.imageCaptionLeft {
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  font-style: italic;
+}
+.imageCaptionCenter {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  font-style: italic;
+}
+.imageCaptionRight {
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  font-style: italic;
+}
+.pageProjectDivContent {
+  width: 100%;
+  height: 100%;
+  margin: 0 0 50px 0 !important;
+}
+.pageProjectDivHeader {
+  width: 100%;
+  height: 100%;
+}
+.newspaperFillText3 {
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+  height: auto;
+  -moz-column-fill: auto; /* Firefox */
+  column-fill: auto;
+  column-gap: 30px;
+  text-align: justify;
+}
+.newspaperFillText2 {
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+  height: auto;
+  -moz-column-fill: auto; /* Firefox */
+  column-fill: auto;
+  column-gap: 30px;
+  text-align: justify;
+}
+.max800width {
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+.max450width {
+  max-width: 450px;
+}
+.pageProjectTitle {
+  width: 100%;
+  height: auto;
+  padding: 50px 0 50px 0;
+  margin: 0;
+  position: relative;
+  text-align: center;
+}
+.pageProjectTitle h1 {
+  color: black;
+  font-size: 4em;
+  text-transform: uppercase;
+}
 .pageTitle {
   width: 100%;
   height: 100%;
   top: 0;
-  /*position: ;*/
   padding: 0 20px 0 20px;
   margin:0 0 50px 0;
   text-align: center;
 }
 .pageTitle h1 {
   line-height: 30vh;
-  color: black;
-  font-size: 6em;
+  font-size: 5.5em;
   text-transform: uppercase;
+}
+.pageProjectTableOfContentsItem {
+  font-size: 1.5em;
+  margin: 0 0 8px 0;
+}
+.normalizeDiv {
+  /*use normalize div when you have columns within columns*/
+  padding: 0;
+  margin: 0;
+}
+ol#sacolakeprogramlist{
+  padding-left: 20px;
+}
+ol#sacolakeprocesslist {
+  padding-left: 20px;
+  list-style: upper-alpha;
 }
 /*-------------*/
 
+.slideshow {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+}
+.slideshow .container {
+  margin: 0 auto;
+  position: relative;
+}
+.slideshow button {
+  position: relative;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eee;
+  border-radius: 2px;
+  background-color: white;
+  stroke: #dd5050;
+  height: 30px;
+  width: 30px;
+}
+.slideshow button:focus {
+  outline: none !important;
+  box-shadow: 0 0 5px #ddd;
+}
+.slideshow .slidedescription {
+  margin-top: 5px;
+  text-align: center;
+  font-size: .8em;  
+}
+
+/*----responsive gallery w3schools----*/
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create four equal columns that sits next to each other */
+.gallery3Column {
+  -ms-flex: 33.33%; /* IE10 */
+  flex: 33.33%;
+  max-width: 33.33%;
+  padding: 0 15px 0 15px;
+}
+
+.galleryImage {
+  vertical-align: middle;
+  margin: 15px 0 15px 0;
+}
 
 
+/*Responsive layout - makes a two column-layout instead of four columns */*/
+@media screen and (max-width: 800px) {
+  .gallery3Column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+  }
+}
 
-
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .gallery3Column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+  }
+}
 
 
 
