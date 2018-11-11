@@ -58,14 +58,15 @@
         </div>
     </nav>
 
-    <div class="pageProjectTitle">
-      <!-- <div class=" architectureColorBackgroundColor"> -->
-        <h1>Environment, form + Feedback</h1>
-    </div>
-
     <div class="wrapper"><!--start of content-->
 
-      <div class="col-xs-12"> <!-- ----start of actual content------>
+      <div class="col-xs-12 normalizeDiv"> <!-- ----start of actual content------>
+
+        <div class="col-xs-12 pageProjectTitle">
+          <a href="../architecture.html" class="linkHighlight">&larr; Back to <span class="architectureColor">Architecture</span></a>
+          <h1>Environment, form + Feedback</h1>
+        </div>
+
         <div class="col-xs-12 col-sm-4 pageProjectDivContent">
           <ul>
             <li><a href="#abstractSitePlan" class="linkUnderlineHighlight pageProjectTableOfContentsItem">Abstract site plan</a></li>
@@ -195,27 +196,27 @@
         <div class="col-xs-12 pageProjectDivContent">
           <div class="slideshow normalizeDiv">
             <div class="container normalizeDiv">
-              <div class="w3-display-container mySlidesPlans">
+              <div class="w3-display-container mySlidesModel">
                 <a href="../img/architecture/environmentFormFeedback/photo_1.JPG" target="_blank">
                   <img class="image" src="../img/architecture/environmentFormFeedback/photo_1.JPG">
                 </a>
                 <div class="imageCaptionCenter">Model: 1/16”=1’</div>
               </div>
-              <div class="w3-display-container mySlidesPlans">
+              <div class="w3-display-container mySlidesModel">
                 <a href="../img/architecture/environmentFormFeedback/photo_2.JPG" target="_blank">
                   <img class="image" src="../img/architecture/environmentFormFeedback/photo_2.JPG">
                 </a>
                 <div class="imageCaptionCenter">Model: 1/16”=1’</div>
               </div>
-              <div class="w3-display-container mySlidesPlans">
+              <div class="w3-display-container mySlidesModel">
                 <a href="../img/architecture/environmentFormFeedback/photo_3.JPG" target="_blank">
                   <img class="image" src="../img/architecture/environmentFormFeedback/photo_3.JPG">
                 </a>
                 <div class="imageCaptionCenter">Model: 1/16”=1’</div>
               </div>
               <div>
-                <button style="float: left;" onclick="plusDivsPlans(-1)">&#10094;</button>
-                <button style="float: right;" onclick="plusDivsPlans(1)">&#10095;</button>
+                <button style="float: left;" onclick="plusDivsModel(-1)">&#10094;</button>
+                <button style="float: right;" onclick="plusDivsModel(1)">&#10095;</button>
               </div>
             </div>
           </div>
@@ -237,35 +238,15 @@
 
 <script>
 var slideIndex = 1;
-showDivsPlans(slideIndex);
+showDivsModel(slideIndex);
 
-function plusDivsPlans(n) {
-  showDivsPlans(slideIndex += n);
+function plusDivsModel(n) {
+  showDivsModel(slideIndex += n);
 }
 
-function showDivsPlans(n) {
+function showDivsModel(n) {
   var i;
-  var x = document.getElementsByClassName("mySlidesPlans");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
-
-<script>
-var slideIndex = 1;
-showDivsPhotos(slideIndex);
-
-function plusDivsPhotos(n) {
-  showDivsPhotos(slideIndex += n);
-}
-
-function showDivsPhotos(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlidesPhotos");
+  var x = document.getElementsByClassName("mySlidesModel");
   if (n > x.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {

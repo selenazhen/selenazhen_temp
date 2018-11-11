@@ -104,6 +104,42 @@ DO NOT TOUCH*/
       height: 100%;
     }
 
+.linkHighlight {
+  position: relative;
+  text-decoration: none;
+  /*border-bottom: 1px black solid;*/
+  display: inline-block;
+  color: black;
+  padding: 0 3px 0 3px;
+  transition: color ease 0.3s;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.linkHighlight::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 5%;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    transition: all ease 0.3s;
+  }
+
+.linkHighlight:hover {
+    color: white;
+    transform: translate(0, 0px);
+    background-color: transparent;
+  }
+
+.linkHighlight:hover::after {
+      height: 100%;
+    }
+
 
 .linkUnderlineJump {
   max-width: 1200px;
@@ -299,15 +335,13 @@ h1.fadeintext{
     
 /*line color*/
 .linkUnderlineJump a.architectureColor:before {
-  /*background-color: #FFBC42; */
-  background-color: black; 
+  background-color: #FFBC42; 
 }
 .linkUnderlineJump a.designColor:before {
-  background-color: black; 
+  background-color: #51B9CC; 
 }
 .linkUnderlineJump a.funColor:before {
-  /*background-color: #D81159; */
-  background-color: black; 
+  background-color: #D8798A; 
 }
 .linkUnderlineJump a.aboutColor:before {
   background-color: black;
@@ -498,7 +532,7 @@ h1.fadeintext{
 }
 .wrapper {
   /*WRAPPER AROUND MAIN CONTENT*/
-  max-width: 1100px;
+  max-width: 1000px;
   height: 100%;
   margin: 0 auto;
   padding: 0 0 100px;
@@ -506,7 +540,7 @@ h1.fadeintext{
 }
 .projectItemContainer {
   width: 100%;
-  height: auto;
+  height: 490px;
   padding: 15px 15px 30px 15px;
   margin: 0;
   position: relative;
@@ -517,13 +551,14 @@ h1.fadeintext{
   text-align:left;
   margin:0;
   padding: 0;
+  position: relative;
 }
 .bw {
-  -webkit-transition: all .75s ease;
-     -moz-transition: all .75s ease;
-       -o-transition: all .75s ease;
-      -ms-transition: all .75s ease;
-          transition: all .75s ease;
+  -webkit-transition: all .65s ease;
+     -moz-transition: all .65s ease;
+       -o-transition: all .65s ease;
+      -ms-transition: all .65s ease;
+          transition: all .65s ease;
   -webkit-filter: grayscale(100%);
 }
 .bw:hover {
@@ -540,21 +575,30 @@ h1.fadeintext{
   height: auto;
 }
 /*crop?? https://stackoverflow.com/questions/493296/css-display-an-image-resized-and-cropped*/
+/*center https://jsbin.com/lidebapomi/edit?html,css,output*/
 .projectItemImage {
   /*formerly '.crop'*/
+  display: inline-block;
+  position: relative;
   width: 100%;
-  height: 230px;
+  height: 220px;
   margin: 0 0 15px 0;
-  padding: 0;
   overflow: hidden;
+  border: 1px solid #eee;
+  background-color: #f8f8f8;
 }
 .projectItemImage img {
-  /*formerly '.crop img'*/
+  max-height: 100%;  
+  max-width: 100%; 
+  position: absolute;  
+  top: 0;  
+  bottom: 0;  
+  left: 0;  
+  right: 0;  
+  margin: auto;
+  object-fit: cover;
   width: 100%;
   height: auto;
-  margin: 0;
-  padding: 0;
-    /*margin: -75px 0 0 -100px;*/
 }
 .image {
   width: 100%;
@@ -622,13 +666,14 @@ h1.fadeintext{
 .max450width {
   max-width: 450px;
 }
+
 .pageProjectTitle {
   width: 100%;
   height: auto;
-  padding: 50px 0 50px 0;
-  margin: 0;
+  padding: 60px 0 60px 0;
+  margin: 0 0 0 0 auto;
   position: relative;
-  text-align: center;
+  /*text-align: center;*/
 }
 .pageProjectTitle h1 {
   color: black;
@@ -642,11 +687,16 @@ h1.fadeintext{
   padding: 0 20px 0 20px;
   margin:0 0 50px 0;
   text-align: center;
+  text-transform: uppercase;
 }
 .pageTitle h1 {
   line-height: 30vh;
   font-size: 5.5em;
   text-transform: uppercase;
+}
+.pageTitle p {
+  max-width: 300px;
+  margin: 0 auto;
 }
 .pageProjectTableOfContentsItem {
   font-size: 1.5em;
