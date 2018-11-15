@@ -13,6 +13,8 @@ p {
 a {
   /*font-size: 1.75em;*/
   font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+
 }
 a:hover {
   text-decoration: none !important;
@@ -20,8 +22,8 @@ a:hover {
 h1 {
   font-size: 3em;
   font-weight: 700;
-  font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
+  font-family: 'Playfair Display', 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: lowercase !important;
 }
 h2 {
   font-size: 2.2em;
@@ -226,7 +228,7 @@ h1.fadeintext{
   line-height: 100vh;
   text-align: center;
   color: white;
-  z-index: 1000;
+  z-index: 100;
   margin:0;
   /*background-color: red;*/
 
@@ -350,6 +352,8 @@ h1.fadeintext{
 .fadeintextWorkOption a.fadeintextWorkOptionLink {
   color: white;
   opacity: .3;
+  font-family: 'Playfair Display', 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: lowercase !important;
 }
 .fadeintextWorkOption a.linkArchitectureColor:hover {
   /*color: #FFBC42;*/
@@ -402,7 +406,7 @@ h1.fadeintext{
   box-shadow: none;
   padding: 0 0 10px 0 ;
   margin: 0;
-  z-index: 1000;
+  z-index: 200;
 }
 .navbar .navbar-nav .nav-link{
   padding: 5px;
@@ -410,7 +414,8 @@ h1.fadeintext{
   font-size: 1.5em;
   background-color: transparent;
   font-weight: 700;
-  text-transform: uppercase; 
+  font-family: 'Playfair Display', 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: lowercase !important;
 }
 .navbar .navbar-nav a.nav-link. {
   background-color: transparent;
@@ -492,11 +497,17 @@ h1.fadeintext{
     .pageTitle h1 {
       line-height: 20vh !important;
     }
+    #buttonTop {
+      right: 20% !important;
+    }
 }
 @media only screen and (min-width: 769px) {
     /* tablets and desktop */
     #landing h1.fadeintext{
       font-size: 6.5em;
+    }
+    #buttonTop {
+      right: 30px;
     }
 }
 @media only screen and (max-width: 768px) {
@@ -521,6 +532,9 @@ h1.fadeintext{
       -moz-column-count: 1 !important; /* Firefox */
       column-count: 1 !important;
     }
+    #buttonTop {
+      right: 15px;
+    }
 }
 .largerWrapper {
   /*WRAPPER AROUND ALL CONTENT FOR LARGE DESKTOPS*/
@@ -529,7 +543,7 @@ h1.fadeintext{
   position: relative;
   background-color: white;
   padding:0 
-  z-index: 1500;
+  z-index: 300;
 }
 .wrapper {
   /*WRAPPER AROUND MAIN CONTENT*/
@@ -569,6 +583,8 @@ h1.fadeintext{
 .projectItemTitle {
   font-weight: 700;
   text-transform: uppercase;
+  font-family: 'Playfair Display', 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: lowercase !important;
 }
 .footer {
   text-align: center;
@@ -585,7 +601,7 @@ h1.fadeintext{
   height: 220px;
   margin: 0 0 15px 0;
   overflow: hidden;
-  border: 1px solid #eee;
+  border: 1px solid black;
   background-color: #f8f8f8;
 }
 .projectItemImage img {
@@ -714,6 +730,56 @@ ol#sacolakeprocesslist {
   padding-left: 20px;
   list-style: upper-alpha;
 }
+
+#aboutDiv {
+  margin-bottom: 100px;
+  width: 100%;
+  height: 800px;
+}
+#buttonTop {
+  display: none;
+  position: fixed;
+  width: 60px;
+  bottom: 20px;
+  /*right: 15px;*/
+  z-index: 400;
+  font-size: 1.2em;
+  border: 1px black solid;
+  outline: none;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0;
+  border-radius: 3px;
+  text-decoration:none;
+  text-transform: uppercase;
+  opacity: .3;
+}
+
+#buttonTop:hover {
+  opacity: 1;
+}
+
+/*#topbutton {*/
+  /*position: fixed;*/
+  /*bottom: 10px;*/
+  /*float: right;*/
+  /*left: 15px;*/
+  /*z-index: 400;*/
+/*}*/
+
+/*#topbutton button {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 100%;
+  border: 1px solid black;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.1em; 
+  color: black;
+}*/
 /*-------------*/
 
 .slideshow {
