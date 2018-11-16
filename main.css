@@ -3,7 +3,7 @@
 body {
   margin: 0;
   /*text-transform: uppercase;*/
-  background-color: #D8798A;
+  background-color: #5C98C9;
 }
 p {
   font-size: 1.4em;
@@ -307,10 +307,10 @@ h1.fadeintext{
 }
 .designColor {
   /*color: black !important;*/
-  color: #51B9CC !important;
+  color: #DB6939 !important;
 }
 .funColor {
-  color: #D8798A !important;
+  color: #5C98C9 !important;
   /*color: black !important;*/
 }
 .aboutColor {
@@ -322,14 +322,14 @@ h1.fadeintext{
   /*background-color: black;*/
 }
 .designColorBackgroundColor {
-  background-color: #51B9CC;
+  background-color: #DB6939;
 }
 .funColorBackgroundColor {
-  background-color: #D8798A;
+  background-color: #5C98C9;
   /*background-color: black;*/
 }
 .aboutColorBackgroundColor {
-  background-color: black;
+  background-color: white;
 }
 .black3pxborder {
   /*border: black 3px solid;*/
@@ -340,10 +340,10 @@ h1.fadeintext{
   background-color: #FFBC42; 
 }
 .linkUnderlineJump a.designColor:before {
-  background-color: #51B9CC; 
+  background-color: #DB6939; 
 }
 .linkUnderlineJump a.funColor:before {
-  background-color: #D8798A; 
+  background-color: #5C98C9; 
 }
 .linkUnderlineJump a.aboutColor:before {
   background-color: black;
