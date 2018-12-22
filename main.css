@@ -22,8 +22,8 @@ a:hover {
 h1 {
   font-size: 3em;
   font-weight: 700;
-  font-family: 'Playfair Display', 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
-  text-transform: lowercase !important;
+  font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase !important;
 }
 h2 {
   font-size: 2.2em;
@@ -148,7 +148,7 @@ DO NOT TOUCH*/
 }
 .linkUnderlineJump a {
   text-decoration: none;
-  /*font-weight: 700;*/
+  font-weight: 700;
   margin: 0 20px 0 0;
   position: relative;
   transition: transform .3s ease-out;
@@ -351,9 +351,9 @@ h1.fadeintext{
 
 .fadeintextWorkOption a.fadeintextWorkOptionLink {
   color: white;
-  opacity: .3;
-  font-family: 'Playfair Display', 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
-  text-transform: lowercase !important;
+  /*opacity: .3;*/
+  font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase; !important;
 }
 .fadeintextWorkOption a.linkArchitectureColor:hover {
   color: #FFBC42;
@@ -415,8 +415,8 @@ h1.fadeintext{
   font-size: 1.5em;
   background-color: transparent;
   font-weight: 700;
-  font-family: 'Playfair Display', 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
-  text-transform: lowercase !important;
+  font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase !important;
 }
 .navbar .navbar-nav a.nav-link. {
   background-color: transparent;
@@ -584,8 +584,8 @@ h1.fadeintext{
 .projectItemTitle {
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Playfair Display', 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
-  text-transform: lowercase !important;
+  font-family: 'Karla','PT Sans', 'Roboto', Arial, Helvetica, sans-serif;
+  text-transform: uppercase !important;
 }
 .footer {
   text-align: center;
